@@ -39,4 +39,19 @@ Constraints:
 1 ≤ N ≤ 1012
 */
 
-
+class Solution{
+	public:
+    	long long findNth(long long N)
+    {
+        // code here.
+        long ans =0;
+        long  i=1;
+        while(N!=0){
+            long a= N%9;
+            N=N/9;
+            ans+=i*a;
+            i=i*10;
+        }
+        return ans;
+    }
+};
